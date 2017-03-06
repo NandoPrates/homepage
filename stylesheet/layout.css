@@ -1,0 +1,672 @@
+/* 
+    Created on : 02/02/2017, 22: 22: 31
+    Author     : Spell Master
+*/
+
+* {
+    margin: 0;
+    padding: 0
+}
+
+html {
+    font-family: sans-serif;
+    color: #555555
+}
+
+body {
+    background-color: #f4f4f4;
+    background-image: url('../images/grid.svg')
+}
+
+/***********************************************
+** Campos divisores Html5
+************************************************/
+header {
+    width: 100%;
+    height: 160px;
+    background-color: #121531
+}
+
+nav {
+    margin-top: 0;
+    min-width: 100%;
+    text-align: center;
+    font-size: 100%;
+}
+
+main {
+    position: relative;
+    margin: 0 auto;
+    width: 100%;
+    min-height: 500px
+}
+
+footer {
+    position: relative;
+    float: left;
+    margin-top: 100px;
+    width: 100%;
+    min-width: 290px;
+    background-color: #121531
+}
+
+/***********************************************
+** Menu Principal
+************************************************/
+/* Menu Principal */
+
+nav ul {
+    list-style-type: none;
+    background-color: #111111
+}
+
+nav .menu_dropdown a {
+    color: #bcbcbc;
+    text-align: center;
+    text-decoration: none;
+    transition: 0.5s;
+    background-color: #111111
+}
+
+nav .menu_dropdown,
+nav .menu_dropdown ul {
+    list-style: none;
+}
+
+nav .menu_dropdown li {
+    position: relative
+}
+
+nav .menu_dropdown a {
+    padding: 15px 12px;
+    display: block;
+    text-decoration: none;
+    font-style: normal;
+    border-left: 1px solid rgba(0,0,0,0.2);
+    border-right: 1px solid rgba(0,0,0,0.7)
+}
+
+nav .menu_dropdown a:hover {
+    background-color: #003366;
+    color: #ffffff
+}
+
+/* menus links */
+nav .menu_dropdown > li {
+    display: inline-block;
+    vertical-align: top;
+    margin-left: -4px
+}
+
+nav .menu_dropdown > li:first-child {
+    margin-left: 0;
+    border-left: none
+}
+
+/* Sub menus links */
+nav .menu_dropdown ul {
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.9)
+}
+
+nav .menu_dropdown > li > ul {
+    text-align: left;
+    display: none;
+    background-color: #222222;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 210px;
+    z-index: 1
+}
+
+nav .menu_dropdown > li > ul li a {
+    text-align: left;
+    padding-left: 20px;
+    border-bottom: 1px solid rgba(0,0,0,0.3);
+    border-top: 1px solid rgba(0,0,0,0.3);
+}
+
+/* Sub menus do sub menu */
+nav .menu_dropdown > li > ul > li > ul {
+    display: none;
+    background-color: #222222;
+    position: absolute;
+    right: 100%;
+    top: 0;
+    z-index: 1
+}
+
+nav .menu_dropdown li ul li ul a {
+    text-align: left;
+    min-width: 230px;
+    padding: 15px 30px
+}
+
+/* ajustes dos ícones do menu */
+nav ul li i {
+    margin-right: 3px;
+    margin-left: 3px
+}
+
+nav .menu_dropdown li ul li i {
+    margin-left: -6px
+}
+
+.menuBar {
+    height: 50px;
+    background-color: #111111;
+    border-bottom: 1px solid rgba(0,0,0,0.9);
+    cursor: pointer;
+    display: none;
+}
+
+.menuBarNavIcon {
+    width: 40px;
+    height: 40px;
+    position: relative;
+    left: 90%;
+    top: 0
+}
+
+.menuBarNavIcon:after {
+    position: absolute;
+    top: 22px;
+    right: 20px;
+    display: block;
+    height: 4px;
+    width: 40px;
+    border-top: 2px solid #ffffff;
+    border-bottom: 2px solid #ffffff;
+    content: ''
+}
+
+.menuBarNavIcon:before {
+    -webkit-transition: all .3s ease;
+    -ms-transition: all .3s ease;
+    transition: all .3s ease;
+    position: absolute;
+    top: 16px;
+    right: 20px;
+    display: block;
+    height: 2px;
+    width: 40px;
+    background: #ffffff;
+    content: ''
+}
+
+.menuBarNavIcon.menuBarCross:after {
+    -webkit-transition: all .3s ease;
+    -ms-transition: all .3s ease;
+    transition: all .3s ease;
+    top: 23px;
+    border: 0;
+    height: 2px;
+    width: 40px;
+    background: #ffffff;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg)
+}
+
+.menuBarNavIcon.menuBarCross:before{
+    top: 23px;
+    background: #ffffff;
+    width: 40px;
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg)
+}
+
+/***********************************************
+** Botões e links
+************************************************/
+a,
+button,
+.buttonTitle {
+    font-family: arial;
+    font-weight: normal;
+    cursor: pointer;
+    text-decoration: none
+}
+
+button {
+    border-radius: 2px 2px 2px 2px;
+    -moz-border-radius: 2px 2px 2px 2px;
+}
+
+.pageup {
+    font-size: 70px;
+    display: none;
+    position: fixed;
+    cursor: pointer;
+    right: 5px;
+    bottom: 30px;
+    color: #ff0000;
+    opacity: 0.5;
+    z-index: 3
+}
+
+.pageup:hover {
+    opacity: 0.7
+}
+
+.modalCancel {
+    float: right;
+    margin-right: 30px;
+    cursor: pointer;
+}
+
+.modalCancel:hover {
+    font-weight: bolder;
+    color: #cc0000
+}
+
+.listBlueBtn {
+    width: 92%;
+    margin: 1% 4% 1% 4%;
+    padding: 4px 8px;
+    font-size: 16px;
+    color: #e4e4e4;
+    background-color: rgba(255,102,0,0.9);
+    border: 1px solid rgba(51,51,51,0.3);
+    transition: 0.3s
+}
+
+.listBlueBtn:hover {
+    color: #ffffff;
+    background-color: #2c5ec0
+}
+
+.buttonTitle {
+    color: #333333;
+    font-size: 20px;
+    padding: 6px 12px;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    -moz-border-top-left-radius: 3px;
+    -moz-border-top-right-radius: 3px;
+    -o-border-top-left-radius: 3px;
+    -o-border-top-right-radius: 3px
+}
+
+.buttonTitle:hover {
+    color: #3366cc
+}
+
+.asingle {
+    color: #3366cc;
+    font-weight: bold;
+    border-bottom: 2px solid #ff0000
+}
+
+.asingle:hover {
+    color: #ff0000;
+}
+
+.btnBlue {
+    font-size: 90%;
+    color: #e4e4e4;
+    padding: 6px 18px;
+    background: linear-gradient(#2c5ec0, #003366);
+    background: -moz-linear-gradient(#2c5ec0, #003366);
+    background: -o-linear-gradient(#2c5ec0, #003366);
+    border: 1px solid rgba(0,0,0,0.3);
+    box-shadow: 0px 8px 10px 0px rgba(0,0,0,0.4);
+    border-radius: 2px 2px 2px 2px;
+    -moz-border-radius: 2px 2px 2px 2px
+}
+
+.btnBlue:hover {
+    color: #ffffff;
+    background: linear-gradient(#cc0000, #660000);
+    background: -moz-linear-gradient(#cc0000, #660000);
+    background: -o-linear-gradient(#cc0000, #660000);
+    border: 1px solid rgba(0,0,0,0.5);
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2)
+}
+
+.sessionbtns {
+    height: 50px;
+    display: inline-table
+}
+
+.modalCloseBtn {
+    z-index: 5;
+    float: right;
+    margin-right: 5px;
+    margin-top: -5px;
+    font-size: 40px;
+    color: #990000;
+    cursor: pointer;
+    transition: linear 0.5s
+}
+
+.modalCloseBtn:hover {
+    color: #cc0000;
+}
+
+.paginateBtn {
+    font-size: 16px;
+    padding: 3px 9px;
+    background-color: #2c5ec0;
+    color: #e4e4e4;
+    border: 3px solid #ffffff
+}
+
+.paginateBtn:hover, .paginateBtn:active {
+    color: #ffffff;
+    background-color: #cc0000;
+    border: 3px solid #cc0000
+}
+
+.tutoriallogosBtn {
+    float: left;
+    margin: 30px;
+    padding-left: 60px;
+    padding-right: 60px;
+    max-width: 100%;
+    cursor: pointer;
+    border: 5px solid #111111;
+    border-radius: 5px;
+    -moz-border-radius: 6px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.5)
+}
+
+.tutoriallogosBtn:hover {
+    border: 5px solid #222222
+}
+
+/***********************************************
+** Campos
+************************************************/
+.banner {
+    float: right;
+    margin-right: 10%
+}
+
+.logo {
+    width: 450px;
+    margin-top: -20px
+}
+
+.logotxt {
+    font-size: 25px;
+    padding-top: 15px;
+    margin-right: 60px
+}
+
+.navMenuBackground {
+    margin: 0 auto;
+    width: 100%;
+    height: 100%;
+    background-color: #121531
+}
+
+.content {
+    margin: 0px auto;
+    max-width: 1200px
+}
+
+/* Loading */
+.loading {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 30px;
+    background-color: #ffffff;
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    -o-border-radius: 3px
+}
+
+.left_divisor {
+    float: left;
+    width: 65%;
+    margin-right: 15px
+}
+
+.right_divisor {
+    float: left;
+    width: 33%;
+}
+
+.pageMargin {
+    margin-top: 20px
+}
+
+.marginAll {
+    margin: 20px
+}
+
+.articles {
+    background-color: #ffffff;
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    -o-border-radius: 3px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.3)
+}
+
+.tittleblue,
+.modalPageTitle {
+    font-size: 30px;
+    color: #ffffff;
+    padding: 10px 20px;
+    border-top-left-radius: 2px;
+    border-top-right-radius: 2px;
+    -moz-border-top-left-radius: 2px;
+    -moz-border-top-right-radius: 2px;
+    -o-border-top-left-radius: 2px;
+    -o-border-top-right-radius: 2px
+}
+
+.tittleblue {
+    background-color: #121531
+}
+
+.modalPageTitle {
+    margin-top: -31px;
+    background-color: #000000
+}
+
+.articlesContent {
+    padding: 1% 3% 3%
+}
+
+.hiddenToggle {
+    cursor: pointer;
+    display: none
+}
+
+.comment {
+    width: auto;
+    background-color: rgba(231,231,231,0.3);
+    border: 1px solid rgba(51,51,51,0.1);
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    -o-border-radius: 3px;
+    margin-bottom: 20px
+}
+
+.sitefade {
+    display: none;
+    position: fixed;
+    z-index: 4;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.5)
+}
+
+.modal {
+    background-color: #ffffff;
+    margin: 5% auto 5% auto;
+    width: 75%;
+    max-height: 50%;
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    -o-border-radius: 3px;
+    max-height: 750px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.7)
+}
+
+.modalLoadTitle {
+    display: none;
+    font-size: 35px;
+    padding-left: 3%;
+    padding-top: 1%;
+    padding-bottom: 0
+}
+
+.modalContainer {
+    padding: 0;
+    margin: 0
+}
+
+.srclogos {
+    float: right;
+    margin-right: 30px;
+    margin-left: 30px;
+    max-width: 100%
+}
+
+.paginate {
+    margin: 0 auto;
+    text-align: center
+}
+
+.showPaginator {
+    margin-top: 30px
+}
+
+.tutorialDescript {
+    min-height: 250px
+}
+
+#navigatorinvalid {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding-top: 40px;
+    background-color: #990000;
+    text-align: center;
+    font-size: 20px!important;
+    color: #bcbcbc;
+    z-index: 999
+}
+
+/***********************************************
+** Formatações de textos
+************************************************/
+.textsmall {
+    font-size: 90%
+}
+
+.textmid {
+    font-size: 105%
+}
+
+.textbig {
+    font-size: 150%
+}
+
+.textred {
+    color: #cc0000
+}
+
+.textgreen {
+    color: #006b15
+}
+
+.textblue {
+    color: #3366cc
+}
+
+.textwhite {
+    color: #f4f4f4
+}
+
+/***********************************************
+** Comuns
+************************************************/
+hr {
+    margin: auto;
+    max-width: 95%;
+    margin-top: 10px;
+    margin-bottom: 10px
+}
+
+img,
+iframe,
+embed,
+svg {
+    max-height: 100%;
+    max-width: 100%
+}
+
+iframe,
+embed {
+    width: 920px;
+    height: 520px;
+    background: none;
+    border: 1px solid #000000
+}
+
+.footervector {
+    display: inline-block;
+    width: 2em
+}
+
+/***********************************************
+** Scroll bar
+************************************************/
+.scroll-xy {
+    overflow: auto;
+}
+.scroll-x {
+    overflow-x: auto;
+}
+.scroll-y {
+    overflow-y: auto;
+    max-height: 400px
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+    background: none;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #333399;
+    -webkit-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.7);
+}
+
+::-webkit-scrollbar-corner {
+    background: none;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+}
+
+::-webkit-scrollbar-thumb {
+    background: #333399;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+}
+::-webkit-scrollbar-thumb:window-inactive {
+    background: #333399;
+}
+

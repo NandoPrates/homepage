@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid" width="240" height="60" viewBox="0 0 240 60">
+  <defs>
+    <style>
+      .cls-1, .cls-2 {
+        font-size: 30px;
+      }
+
+      .cls-2 {
+        fill: #f60;
+        font-family: "Calibri";
+      }
+
+      .cls-3 {
+        fill: #fff;
+        font-family: "Cambria-Bold";
+        font-weight: bold;
+      }
+
+      .cls-4 {
+        fill: #97d6fe;
+        font-family: "Gabriola";
+      }
+    </style>
+  </defs>
+  <text transform="translate(20 41) scale(1 1.05)" class="cls-1"><tspan class="cls-1"><tspan class="cls-2">Ragna<tspan class="cls-3"> </tspan><tspan class="cls-4">Admin</tspan></tspan></tspan></text>
+</svg>

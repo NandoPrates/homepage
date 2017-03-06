@@ -1,0 +1,171 @@
+/* 
+    Created on : 04/02/2017, 00:31:25
+    Author     : Spell Master
+*/
+
+@media screen and (max-width: 1000px) {
+    .logotxt {
+        font-size: 20px;
+        padding-top: 20px;
+        margin-right: 40px
+    }
+    .menuBar {
+        z-index: 1;
+        display: block
+    }
+    nav ul {
+        position: absolute;
+        right: 100%
+    }
+    nav .menu_dropdown a {
+        color: #bcbcbc;
+        border-bottom: 1px solid rgba(0,0,0,0.3);
+        border-top: 1px solid rgba(0,0,0,0.3);
+        border-left: none;
+        border-right: none
+    }
+    nav .menu_dropdown > li {
+        display: block;
+        z-index: 2
+    }
+    nav .menu_dropdown > li a {
+        padding-left: 20px;
+        text-align: left;
+    }
+    nav .menu_dropdown ul {
+        box-shadow: none;
+    }
+    nav .menu_dropdown > li > ul {
+        text-align: left;
+        display: none;
+        position: relative;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        min-width: 200px;
+        z-index: 2
+    }
+    nav .menu_dropdown > li > ul li a {
+        background-color: #181d2f;
+        text-align: left
+    }
+    nav .menu_dropdown > li > ul > li > ul {
+        display: none;
+        position: relative;
+        right: 0;
+        top: 0;
+        z-index: 1;
+    }
+    nav .menu_dropdown li ul li ul a {
+        background-color: #121531;
+    }
+    .menu_dropdown {
+        width: 100%
+    }
+    .content {
+        width: 100%
+    }
+    .left_divisor {
+        width: 100%;
+    }
+    .right_divisor {
+        width: 100%
+    }
+    .modal {
+        margin: 0;
+        width: 100%;
+        height: 80%
+    }
+    .textsmall {
+        font-size: 85%
+    }
+    .textmid {
+        font-size: 100%
+    }
+    .textbig {
+        font-size: 145%
+    }
+    .pageup {
+        font-size: 60px
+    }
+    .tittleblue,
+    .modalPageTitle {
+        font-size: 28px
+    }
+    .modalPageTitle {
+        margin-top: -20px;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    header {
+        height: 120px
+    }
+    .logo {
+        margin-top: 10px
+    }
+    .logotxt {
+        font-size: 15px;
+        padding-top: 10px;
+        margin-right: 10px
+    }
+    .textsmall {
+        font-size: 80%
+    }
+    .textmid {
+        font-size: 95%
+    }
+    .textbig {
+        font-size: 140%
+    }
+    .srclogos {
+        float: none;
+        margin: 0;
+        width: auto
+    }
+    .pageup {
+        font-size: 50px
+    }
+    .modal {
+        margin: 0;
+        width: 100%;
+        height: 50%
+    }
+    .tittleblue,
+    .modalPageTitle {
+        font-size: 20px
+    }
+    .modalLoadTitle {
+        margin: 0 auto;
+        font-size: 23px
+    }
+    .modalCancel {
+        float: right;
+        margin-right: 10px;
+        cursor: pointer;
+    }
+    .modalCloseBtn {
+        float: none;
+        margin-left: 90%;
+        padding-bottom: 10px;
+    }
+    .scroll-y {
+        overflow-y: auto;
+        max-height: 200px
+    }
+    .tutoriallogosBtn {
+        float: left;
+        padding: 0;
+        margin-top: 30px;
+        margin-bottom: 30px;
+        width: 85%;
+        margin-left: 0;
+        margin-right: 0
+    }
+    iframe {
+        height: 250px
+    }
+    .footercategory {
+        width: 150px
+    }
+}

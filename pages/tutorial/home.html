@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<script type="text/javascript">
+    $(document).ready(function () {
+        Initialpaginator();
+        modalWindow();
+        paginator();
+
+        function Initialpaginator() {
+            $('.showPaginator').load('./pages/tutorial/paginate/page1.html');
+            return false;
+        }
+    });
+</script>
+<div class="pageMargin articles">
+    <div class="tittleblue textbig">
+        <i class="fa fa-book"></i> Guias e Tutoriais
+    </div>
+    <div class="articlesContent pageMargin textmid">
+        <p>Tem alguma dúvida? Precisa aprender algo? Estudar?</p>
+        <p>Sinta-se a vontade em ver nossos guias e tutoriais disponíveis.</p>
+        <br>
+        <div class="textsmall">
+            <p class="textblue">Estes tutoriais são atulizados sempre quando possível, sendo removidos, adicionados ou corrigidos. Se não encontrou o que procurava, aguarde que em breve sua dúvida poderá ser publicada em algum tutorial.</p>
+            <p class="textgreen">Você também pode publicar tutoriais aqui! Entre em contato com o administrador do website para saber o que é necessário.</p>
+        </div>
+        <hr>
+        <div class="paginate">
+            <button name= "pages/tutorial/paginate/page" id="1" class="paginateBtn">1</button>
+            <button name= "pages/tutorial/paginate/page" id="2" class="paginateBtn">2</button>
+            <button name= "pages/tutorial/paginate/page" id="3" class="paginateBtn">3</button>
+            <button name= "pages/tutorial/paginate/page" id="4" class="paginateBtn">4</button>
+            <i class="fa fa-ellipsis-h"></i>
+            <button name= "pages/tutorial/paginate/page-" id="son" class="paginateBtn"><i class="fa fa-lightbulb-o"></i></button>
+        </div>
+        <div class="showPaginator"></div>
+    </div>
+</div>

@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <title>Ragna Admim Store Center</title>
+        <meta name="ROBOTS" content="INDEX, FOLLOW">
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="autor" content="Spell Master"/>
+
+        <script src="javascript/jquery-1.12.4.js" type="text/javascript"></script>
+        <script src="javascript/radmincore.js" type="text/javascript"></script>
+        <script type="text/javascript">
+            function NavAgent() { // Bloquear os lixos de navegadores da microsoft
+                var trident = !!navigator.userAgent.match(/Trident\/7.0/);
+                var net = !!navigator.userAgent.match(/.NET4.0E/);
+                var IE11 = trident && net;
+                var IEold = (navigator.userAgent.match(/MSIE/i) ? true : false);
+                var Edge = (navigator.userAgent.match(/Edge/i) ? true : false);
+                if (IE11 || IEold || Edge) {
+                    document.getElementById("navigatorinvalid").style.display = "block";
+                }
+                return false;
+            }
+            $(document).ready(function () {
+                mainMenu();
+                loadIndex();
+                scrollUp();
+            });
+        </script>
+        <link href="stylesheet/layout.css" rel="stylesheet" type="text/css"/>
+        <link href="stylesheet/responsive-layout.css" rel="stylesheet" type="text/css"/>
+        <link href="stylesheet/font-awesome.css" rel="stylesheet" type="text/css"/>
+
+    </head>
+    <body onload="NavAgent()">
+        <header>
+            <p align="right" class="textwhite logotxt">Tudo para seu servidor em um só lugar!</p>
+            <p align="right"><img src="images/logo.svg" class="logo" alt=""></p>
+
+        </header>
+
+        <nav>
+            <div class="menuBar"><div class="menuBarNavIcon"></div></div>
+            <ul class="menu_dropdown">
+                <li><a name="pages/common/home" class="getLink"><i class="fa fa-home"></i> Início </a></li>
+                <li><a name="pages/common/forum" class="getLink"><i class="fa fa-commenting"></i> Fórum / Emulador </a></li>
+
+                <li>
+                    <a><i class="fa fa-snapchat-ghost"></i> Client Patch <i class="fa fa-angle-down"></i></a>
+                    <ul>
+                        <li><a name="pages/pacth/cronuspacth" class="getLink">Cronus Patch</a></li>
+                        <li><a name="pages/pacth/roloader" class="getLink">Ro Loader</a></li>
+                        <li><a name="pages/pacth/thorpacth" class="getLink">Thor Auto Patch</a></li>
+                        <li><a name="pages/pacth/neoncube" class="getLink">Neon Cube</a></li>
+                    </ul>
+                </li>
+
+                <li><a><i class="fa fa-cubes"></i> Programas <i class="fa fa-angle-down"></i></a>
+                    <ul>
+                        <li><a name="pages/program/actor" class="getLink">Act OR 2</a></li>
+                        <li><a name="pages/program/browedit" class="getLink">Brow Edit</a></li>
+                        <li><a><i class="fa fa-angle-left"></i> Compiladores</a>
+                            <ul>
+                                <li><a name="pages/program/vc2010" class="getLink">Visual C++ 2010 (ISO)</a></li>
+                                <li><a name="pages/program/vc2012" class="getLink">Visual Desktop Client (VC 2012)</a></li>
+                                <li><a name="pages/program/vc2015" class="getLink">Visual Studio 2015</a></li>
+                                <!--<li><a name="pages/program/clang" class="getLink">Clang</a></li> -->
+                            </ul>
+                        </li>
+                        <li><a name="pages/program/grfbuilder" class="getLink">Grf Builder</a></li>
+                        <li><a name="pages/program/grfeditor" class="getLink">Grf Editor</a></li>
+                        <li><a name="pages/program/compilergui" class="getLink">Lub Compiler 5.1.4</a></li>
+                        <li><a name="pages/program/nemo" class="getLink">Nemo</a></li>
+                        <li><a name="pages/program/netbeans" class="getLink">NetBeans IDE</a></li>
+                        <li><a name="pages/program/notepad" class="getLink">Notepad++</a></li>
+
+                        <li><a><i class="fa fa-angle-left"></i> Servidores MySql</a>
+                            <ul>
+                                <li><a name="pages/program/xampp" class="getLink">Xampp</a></li>
+                                <li><a name="pages/program/wampp" class="getLink">Wampp Serve</a></li>
+                            </ul>
+                        </li>
+
+                        <li><a name="pages/program/photoshop" class="getLink">Photoshop CS6</a></li>
+                        <li><a name="pages/program/sprconview" class="getLink">SPR Conview</a></li>
+                        <li><a name="pages/program/weemapcache" class="getLink">Wee Map Cache</a></li>
+                    </ul>
+                </li>
+
+                <li><a><i class="fa fa-desktop"></i> Web Pages <i class="fa fa-angle-down"></i></a>
+                    <ul>
+                        <li><a name="pages/website/cerescp" class="getLink">Ceres CP</a></li>
+                        <li><a name="pages/website/fluxcp" class="getLink">Flux CP</a></li>
+                        <li><a name="pages/website/forumipb" class="getLink">Forum IPS</a></li>
+                        <li><a name="pages/website/forumphbb" class="getLink">Forum PhpBB</a></li>
+                    </ul>
+                </li>
+                <li><a><i class="fa fa-folder-open"></i> Pack's <i class="fa fa-angle-down"></i></a>
+                    <ul>
+                        <li><a name="pages/pack/dllpack" class="getLink">Dll's</a></li>
+                        <li><a name="pages/pack/hexed" class="getLink">Hexed's</a></li>
+                        <!--
+                        <li><a name="pages/pack/packitem" class="getLink">Itens</a></li>
+                        <li><a name="pages/pack/packimage" class="getLink">Imagens</a></li>
+                        -->
+                        <li><a name="pages/pack/packlua" class="getLink">Lua Files</a></li>
+                        <li><a name="pages/pack/packmapa" class="getLink">Mapas</a></li>
+                    </ul>
+                </li>
+                
+                <li><a name="pages/tutorial/home" class="getLink"><i class="fa fa-book"></i> Guias </a></li>
+            </ul>
+        </nav>
+        <main>
+            <div class="content"></div>
+        </main>
+        <footer>
+            <center>
+                <div class="marginAll textsmall textwhite">
+                    <p><u>Web Site Desenvolvido por</u></p>
+                    <p class="textblue"><b>Spell Master</b></p>
+                    <br>
+                    <p>Contato Skype: spellmastergames</p>
+                    <br><br><hr><br>
+                    <div class="footervector">
+                        <svg viewBox="0 0 452 520">
+                        <title>HTML5 Logo</title>
+                        <path fill='RGB(227,79,38)' d='M 41,460 L 0,0 451,0 410,460 225,512'/>
+                        <path fill='RGB(239,101,42)' d='M 226,472 L 375,431 410,37 226,37'/>
+                        <path fill='RGB(236,237,238)' d='M 226,208 L 151,208 146,150 226,150 226,94 84,94 99,265 226,265 z M 226,355 L162,338 158,293 102,293 109,382 226,414 z'/>
+                        <path fill='RGB(255,255,255)' d='M 226,265 L 295,265 288,338 226,355 226,414 341,382 357,208 226,208 z M 226,94 L226,150 362,150 367,94 z'/>
+                        </svg>
+                    </div>
+                    <div class="footervector">
+                        <svg viewBox="0 0 452 520">
+                        <title>Javascript Logo</title>
+                        <path fill='RGB(229,162,40)' d='M 0,0 L 451,0 410,460 225,512 41,460'/>
+                        <path fill='RGB(241,191,38)' d='M 226,472 L375,431 410,37 226,37'/>
+                        <path fill='RGB(236,237,238)' d='M 226,94 L 113,94 102,265 226,265 226,208 160,208 165,150 226,150 z M 226,355 L 162,338 158,293 102,293 109,382 226,414 z'/>
+                        <path fill='RGB(255,255,255)' d='M 226,265 L 295,265 288,338 226,355 226,414 341,382 357,208 226,208 z M 226,94 L 339,94 357,180 301,180 293,150 226,150 z'/>
+                        </svg>
+                    </div>
+                    <div class="footervector">
+                        <svg viewBox="0 0 452 520">
+                        <title>CSS3 Logo</title>
+                        <path fill='RGB(12,115,184)' d='M 41,460 L 0,0 451,0 410,460 225,512'/>
+                        <path fill='RGB(48,169,220)' d='M 226,472 L 375,431 410,37 226,37'/>
+                        <path fill='RGB(236,237,238)' d='M 226,208 L 94,208 99,265 226,265 z M 226,94 L 84,94 89,150 226,150 z M 226,355 L 102,322 109,382 226,414 z'/>
+                        <path fill='RGB(255,255,255)' d='M 226,265 L 295,265 288,338 226,355 226,414 341,382 367,94 226,94 226,150 306,150 300,208 226,208 z'/>
+                        </svg>
+                    </div>
+                    <br>
+                    <i class="textsmall">* Applications *</i>
+                    <br>
+                    <br>
+                    <div class="footercategory">
+                        <i class="fa fa-mobile-phone fa-3x"></i>&numsp;
+                        <i class="fa fa-laptop fa-3x"></i> &numsp;
+                        <i class="fa fa-tablet fa-3x"></i> &numsp;
+                        <i class="fa fa-chrome fa-2x"></i> &numsp;
+                        <i class="fa fa-firefox fa-2x"></i> &numsp;
+                        <i class="fa fa-opera fa-2x"></i>
+                        <br>
+                        <i class="textsmall">* Compatibility *</i>
+                    </div>
+                </div>
+            </center>
+        </footer>
+        <div class="sitefade">
+            <div class="modal">
+                <div class="modalLoadTitle">
+                    Processando Aguarde...  <span class="modalCancel" title="Cancelar">X</span>
+                </div>
+                <hr>
+                <div class="modalContainer"></div>
+            </div>
+        </div>
+        <a class="pageup" title="Voltar para o topo"><i class="fa fa-chevron-circle-up"></i></a>
+        <div id="navigatorinvalid">
+            <div class="marginAll textsmall">
+                <i class="fa fa-internet-explorer fa-4x"></i> &nbsp; <i class="fa fa-edge fa-4x"></i> 
+                <hr>
+                <p>Foi detectado que você acessou esse website por um desses navegadores:</p>
+                <p>Internet Explore ou Microsoft Edge.</p>
+                <p>Este website foi projeto com o uso de HTML5, CSS3 e jQuery, pelos quais os navegadores citados acima não produz resultados satisfatórios.</p>
+                <p>Para melhor uso e previnir danos será impedido o uso desse website com esse navegadores.</p>
+                <br><b>. . .</b><br><br>
+                <div class="textsmall">
+                    <p>Para melhor experiência aconselhamos o uso do Google Chrome <i class="fa fa-chrome"></i></p>
+                    <p>Outro navegador que terá ótimos rendimentos é o Mozilla FireFox <i class="fa fa-firefox"></i></p>
+                    <br>
+                    <p>Caso não possua algum desses navegadores confira os links para download dos mesmos, direto pelos sites oficiais</p>
+                </div>
+                <br><hr><br>
+                <a class="btnBlue" href="https://www.google.com.br/chrome/browser/desktop/"> Download Google Chrome &nbsp; <i class="fa fa-chrome"></i> </a>
+                &nbsp;
+                <a class="btnBlue" href="https://www.mozilla.org/pt-BR/"> Download Mozilla FireFox &nbsp; <i class="fa fa-firefox"></i> </a>
+            </div>
+        </div>
+    </body>
+</html>
